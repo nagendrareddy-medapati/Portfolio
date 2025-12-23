@@ -1,0 +1,12 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Purna Nagendra Reddy's Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Static site - no build needed'"
+  },
+  "keywords": ["portfolio", "web developer"],
+  "author": "Purna Nagendra Reddy",
+  "license": "MIT"
+}
