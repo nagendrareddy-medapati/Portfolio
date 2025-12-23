@@ -1,0 +1,270 @@
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+
+/* Large Screens (Desktop) */
+@media screen and (min-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+}
+
+/* Medium to Large Screens */
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+}
+
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+/* Small to Medium Screens (Tablets Portrait, Large Phones) */
+@media screen and (max-width: 900px) {
+  section {
+    margin: 0 3%;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .section__text__p2 {
+    font-size: 1.5rem;
+  }
+
+  .about-grid {
+    flex-direction: column;
+  }
+
+  .project-row {
+    flex-direction: column;
+  }
+
+  .details-container {
+    margin: 1rem 0;
+  }
+}
+
+/* Mobile Devices (Phones) */
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: fit-content;
+  }
+
+  #profile {
+    height: fit-content;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+  }
+
+  .section__pic-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+  }
+
+  article {
+    font-size: 1rem;
+  }
+
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+
+  .contact-info-container {
+    margin: 0;
+  }
+
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .text-container {
+    text-align: justify;
+  }
+
+  section {
+    margin: 0 4%;
+    padding-top: 2vh;
+  }
+
+  .about-grid {
+    gap: 1rem;
+  }
+
+  .details-container {
+    padding: 1rem;
+  }
+
+  .project-row {
+    gap: 1rem;
+  }
+
+  #skills,
+  #internships,
+  #projects,
+  #certifications {
+    margin-top: 5rem;
+  }
+
+  #about {
+    margin-top: 3rem;
+  }
+
+  #contact {
+    margin-top: 3rem;
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .btn-container {
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-container .btn {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  #socials-container {
+    gap: 0.8rem;
+  }
+
+  .intern-description {
+    font-size: 0.9rem;
+  }
+
+  .details-container ul li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Devices (Small Phones) */
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .section__text__p1 {
+    font-size: 0.9rem;
+  }
+
+  .section__text__p2 {
+    font-size: 1.1rem;
+  }
+
+  .section__pic-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  section {
+    margin: 0 3%;
+  }
+
+  .details-container {
+    padding: 0.8rem;
+  }
+
+  .experience-sub-title {
+    font-size: 1.1rem;
+  }
+
+  .btn-container .btn {
+    width: 90%;
+  }
+
+  .contact-info-container p {
+    font-size: 0.9rem;
+  }
+}
