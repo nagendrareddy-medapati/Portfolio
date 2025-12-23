@@ -2,6 +2,34 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --text-secondary: rgb(85, 85, 85);
+  --border-color: rgb(163, 163, 163);
+  --container-bg: #ffffff;
+  --container-bg-alt: rgb(250, 250, 250);
+  --nav-bg: #ffffff;
+  --button-bg: rgb(53, 53, 53);
+  --button-text: #ffffff;
+  --hover-color: rgb(119, 115, 115);
+  --menu-bg: rgb(229, 226, 226);
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f0f0f;
+  --text-color: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --border-color: #404040;
+  --container-bg: #1a1a1a;
+  --container-bg-alt: #252525;
+  --nav-bg: #1a1a1a;
+  --button-bg: #e0e0e0;
+  --button-text: #0f0f0f;
+  --hover-color: #a0a0a0;
+  --menu-bg: #2a2a2a;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +37,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -16,7 +47,8 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
 }
 
 /* TRANSITION */
@@ -37,6 +69,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  background-color: var(--nav-bg);
+  transition: background-color 0.3s ease;
 }
 
 .nav-links {
@@ -46,16 +80,17 @@ nav {
 }
 
 a {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: transparent;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: rgb(119, 115, 115);
+  color: var(--hover-color);
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: var(--border-color);
 }
 
 .logo {
@@ -66,10 +101,48 @@ a:hover {
   cursor: default;
 }
 
+/* THEME TOGGLE */
+
+.theme-toggle {
+  background: none;
+  border: 0.15rem solid var(--border-color);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  border-color: var(--text-color);
+}
+
+.theme-icon {
+  font-size: 1.5rem;
+  transition: transform 0.5s ease;
+  display: inline-block;
+}
+
+.theme-toggle:active .theme-icon {
+  transform: rotate(360deg);
+}
+
+#desktop-nav {
+  display: flex;
+  gap: 2rem;
+}
+
 /* HAMBURGER MENU */
 
 #hamburger-nav {
   display: none;
+  justify-content: space-between;
+  padding: 0 2rem;
 }
 
 .hamburger-menu {
@@ -89,19 +162,19 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
-  transition: all 0.3 ease-in-out;
+  background-color: var(--text-color);
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: rgb(229, 226, 226);
+  background-color: var(--menu-bg);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links a {
@@ -109,9 +182,9 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links li {
@@ -238,7 +311,8 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: 0.1rem solid var(--button-bg);
+  transition: all 0.3s ease;
 }
 
 .btn-color-1:hover,
@@ -248,20 +322,21 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+  background: var(--button-bg);
+  color: var(--button-text);
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  opacity: 0.8;
 }
 
 .btn-color-2 {
   background: none;
+  color: var(--text-color);
 }
 
 .btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
+  border: 0.1rem solid var(--button-bg);
 }
 
 .btn-container {
@@ -311,18 +386,18 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 1rem;
-  margin-bottom: 1rem;  
+  margin-bottom: 1rem;
 }
 
 
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: var(--container-bg);
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: 0.1rem solid var(--border-color);
   text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section-container {
@@ -344,10 +419,11 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: var(--text-secondary);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
+  transition: color 0.3s ease;
 }
 
 .experience-details-container {
@@ -383,8 +459,9 @@ article .icon {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: var(--border-color);
+  background: var(--container-bg-alt);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .project-img {
@@ -395,12 +472,14 @@ article .icon {
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
 .project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  color: var(--text-color);
+  border-color: var(--border-color);
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 
@@ -424,11 +503,11 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  border: 0.1rem solid var(--border-color);
+  background: var(--container-bg-alt);
   margin: 2rem auto;
   padding: 0.5rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .contact-info-container {
@@ -466,7 +545,7 @@ footer p {
 /* SKILLS SECTION IMPROVEMENTS */
 
 .details-container ul {
-  list-style: none; /* Remove bullet points */
+  list-style: none;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -475,30 +554,36 @@ footer p {
 .details-container ul li {
   padding: 6px 0;
   font-size: 1rem;
-  color: #333;
-  transition: transform 0.2s ease;
+  color: var(--text-secondary);
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
 .details-container ul li:hover {
   transform: scale(1.05);
-  color: #000;
+  color: var(--text-color);
 }
 
-/* Optional: subtle box hover effect */
 .details-container:hover {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
+
+[data-theme="dark"] .details-container:hover {
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.05);
+}
+
 .intern-role {
   font-size: 1.1rem;
-  color: #444;
+  color: var(--text-secondary);
   margin-top: 0.5rem;
+  transition: color 0.3s ease;
 }
 
 .intern-description {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--text-secondary);
   margin: 0.5rem 0 1rem 0;
+  transition: color 0.3s ease;
 }
 
 .intern-projects {
@@ -509,7 +594,8 @@ footer p {
 .intern-projects li {
   font-weight: 600;
   margin: 4px 0;
-  color: #222;
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
 .project-row {
@@ -522,12 +608,12 @@ footer p {
 #certifications,
 #skills,
 #internships,#about{
-  scroll-margin-top: 10vh; /* Adjust based on your navbar height */
+  scroll-margin-top: 10vh;
 }
 #projects {
-  margin-bottom: 4rem; /* or 60px, adjust as needed */
+  margin-bottom: 4rem;
 }
 #certifications {
-  margin-top: 15rem; /* Adds spacing from above section */
+  margin-top: 15rem;
 }
 #contact{margin-top: 1rem;}

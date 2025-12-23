@@ -91,7 +91,7 @@
 
   #profile {
     height: fit-content;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     padding-top: 2rem;
   }
 
@@ -163,30 +163,34 @@
   }
 
   .about-grid {
-    gap: 1rem;
+    gap: 0.8rem;
   }
 
   .details-container {
     padding: 1rem;
+    margin-bottom: 0.8rem;
   }
 
   .project-row {
-    gap: 1rem;
+    gap: 0.8rem;
   }
 
   #skills,
   #internships,
-  #projects,
-  #certifications {
-    margin-top: 5rem;
+  #projects {
+    margin-top: 2rem;
   }
 
   #about {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
   }
 
   #contact {
-    margin-top: 3rem;
+    margin-top: 2rem;
+  }
+
+  #certifications {
+    margin-top: 2rem;
   }
 
   .contact-info-upper-container {
@@ -222,6 +226,19 @@
 
   .details-container ul li {
     font-size: 0.9rem;
+  }
+
+  .theme-toggle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .theme-icon {
+    font-size: 1.2rem;
+  }
+
+  #hamburger-nav {
+    padding: 0 1rem;
   }
 }
 
@@ -266,5 +283,14 @@
 
   .contact-info-container p {
     font-size: 0.9rem;
+  }
+
+  .theme-toggle {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .theme-icon {
+    font-size: 1rem;
   }
 }
