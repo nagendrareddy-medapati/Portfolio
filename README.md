@@ -62,7 +62,7 @@ Front and Back pages of Portfolio
 
 If you’d like to connect or collaborate:
 📧 Email: [nagendrareddy0326@gmail.com]<br>
-💼 LinkedIn: https://linkedin.com/in/ruthika-nalajala-73127628b<br>
+💼 LinkedIn: https://www.linkedin.com/in/purna-nagendra-reddy-medapati/<br>
 🧑‍💻 Portfolio: https://github.com/nagendrareddy-medapati
 
 ---
