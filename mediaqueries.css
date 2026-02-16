@@ -60,26 +60,67 @@
 @media screen and (max-width: 900px) {
   section {
     margin: 0 3%;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
   }
 
   .title {
     font-size: 2.5rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+  }
+
+  .section__text__p1 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
   }
 
   .section__text__p2 {
     font-size: 1.5rem;
+    line-height: 1.4;
   }
 
   .about-grid {
     flex-direction: column;
+    gap: 1.5rem;
   }
 
   .project-row {
     flex-direction: column;
+    gap: 1.5rem;
   }
 
   .details-container {
-    margin: 1rem 0;
+    margin: 1.25rem 0;
+    padding: 1.75rem;
+  }
+
+  .text-container p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .experience-sub-title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+
+  .details-container ul li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    padding: 0.5rem 0;
+  }
+
+  .btn {
+    font-size: 1.05rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .page-views-container {
+    margin: 2rem auto;
+    padding: 1.25rem;
+    max-width: 350px;
   }
 }
 
@@ -99,7 +140,7 @@
   .section__pic-container {
     width: 200px;
     height: 200px;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem;
   }
 
   article {
@@ -119,15 +160,19 @@
 
   .contact-info-container {
     margin: 0;
+    padding: 1rem;
   }
 
   .contact-info-container p,
   .nav-links li a {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
   }
 
   .experience-sub-title {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
   }
 
   .logo {
@@ -136,7 +181,7 @@
 
   .nav-links {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
     text-align: center;
   }
 
@@ -146,87 +191,132 @@
     justify-content: center;
   }
 
+  .section__text__p1 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
   .section__text__p2 {
     font-size: 1.25rem;
+    line-height: 1.5;
   }
 
   .title {
     font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
   }
 
   .text-container {
-    text-align: justify;
+    text-align: left;
+    line-height: 1.8;
+  }
+
+  .text-container p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-top: 1.5rem;
+    padding: 0 0.5rem;
   }
 
   section {
     margin: 0 4%;
-    padding-top: 2vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
   }
 
   .about-grid {
-    gap: 0.8rem;
+    gap: 1.25rem;
   }
 
   .details-container {
-    padding: 1rem;
-    margin-bottom: 0.8rem;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .details-container h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .details-container p {
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  .details-container ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 0.5rem 0;
   }
 
   .project-row {
-    gap: 0.8rem;
+    gap: 1.25rem;
   }
 
   #skills,
   #internships,
   #projects {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   #about {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
 
   #contact {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   #certifications {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   .contact-info-upper-container {
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
+    gap: 1rem;
+    padding: 1.5rem;
   }
 
   .btn {
     width: 100%;
-    font-size: 0.9rem;
-    padding: 0.8rem;
+    font-size: 1rem;
+    padding: 1rem;
+    line-height: 1.5;
   }
 
   .btn-container {
-    gap: 0.5rem;
+    gap: 1rem;
     flex-direction: column;
     align-items: center;
+    margin-top: 1.5rem;
   }
 
   .btn-container .btn {
-    width: 80%;
-    max-width: 250px;
+    width: 85%;
+    max-width: 280px;
   }
 
   #socials-container {
-    gap: 0.8rem;
+    gap: 1rem;
+    margin-top: 1.5rem;
   }
 
   .intern-description {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 1rem 0;
   }
 
-  .details-container ul li {
-    font-size: 0.9rem;
+  .intern-role {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-top: 0.75rem;
+  }
+
+  .intern-projects li {
+    line-height: 1.7;
+    margin: 0.75rem 0;
   }
 
   .theme-toggle {
@@ -239,6 +329,22 @@
   }
 
   #hamburger-nav {
+    padding: 0 1rem;
+    height: 10vh;
+  }
+
+  .page-views-container {
+    margin: 2rem 0;
+    padding: 1.25rem;
+  }
+
+  .page-views-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  footer p {
+    line-height: 1.6;
     padding: 0 1rem;
   }
 }
@@ -293,5 +399,69 @@
 
   .theme-icon {
     font-size: 1rem;
+  }
+}
+
+/* ENHANCED TOUCH INTERACTIONS */
+@media (hover: none) and (pointer: coarse) {
+
+  .hamburger-icon {
+    padding: 0.5rem;
+    margin: -0.5rem;
+    touch-action: manipulation;
+  }
+
+  .theme-toggle {
+    min-width: 44px;
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 1rem 1.5rem;
+    touch-action: manipulation;
+  }
+
+  .menu-links a {
+    padding: 1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+  }
+
+  .nav-links a {
+    padding: 0.5rem 0;
+    touch-action: manipulation;
+  }
+
+  .icon {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.5rem;
+    touch-action: manipulation;
+  }
+
+  .contact-info-container {
+    padding: 0.75rem;
+    touch-action: manipulation;
+  }
+
+  a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  }
+
+  [data-theme="dark"] a {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+  }
+
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .details-container {
+    touch-action: pan-y;
   }
 }
